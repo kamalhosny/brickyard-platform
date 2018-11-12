@@ -1,0 +1,6 @@
+<div class="vehicle"
+	[class.selected]="selectedVehicleId == vehicle.id"
+	(click)="clicked()">
+	<p class="vehicle__name">{{vehicle?.description}}</p>
+	<p class="vehicle__state"><span>current state:</span> "{{vehicle?.current_state?.name}}"</p>
+</div>

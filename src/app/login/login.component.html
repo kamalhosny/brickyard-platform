@@ -1,0 +1,27 @@
+<main class="login">
+  <header class="login__header">
+    <h1 class="login__header__logo">
+      <img src="../../assets/logo.png" alt="Brickyard_logo" class="logo__image">
+    </h1>
+  </header>
+  <form [formGroup]="loginForm" class="login__form" (submit)="onLoginSubmit()">
+      <div [ngClass]="{'has-error': (loginForm.controls.email.errors && loginForm.controls.email.dirty), 'has-success': !loginForm.controls.email.errors}">
+        <input placeholder="Email" type="text" name="username" class="login__form__input" formControlName="email"/>
+        <div class='error-message'>
+          <div *ngIf="loginForm.controls['email'].errors?.required && loginForm.controls['email'].dirty">This field is required</div>
+          <div *ngIf="loginForm.controls['email'].errors?.validateEmail && loginForm.controls['email'].dirty">This must be a valid e-mail</div>
+        </div>
+      </div>
+      <div [ngClass]="{'has-error': (loginForm.controls.password.errors && loginForm.controls.password.dirty), 'has-success': !loginForm.controls.password.errors}">
+        <label for="password" class="form__label">Password</label>
+        <input placeholder="Password" type="password" name="password" class="login__form__input" formControlName="password" />
+        <div class='error-message'>
+          <div *ngIf="loginForm.controls['password'].errors?.required && loginForm.controls['password'].dirty">This field is required</div>
+        </div>
+      </div>
+        <div class="form__button">
+          <input type='submit' class="button--submit" [disabled]="loginForm.invalid" value="Sign in">
+        </div>
+        <div class='error-message' *ngIf="error">{{error}}</div>
+  </form>
+</main>

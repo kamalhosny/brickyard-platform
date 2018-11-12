@@ -1,2 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import './fonts.scss';
+@import '../node_modules/ngx-toastr/toastr.css';
+
+$ionicons-font-path: "~ionicons/dist/fonts";
+@import "~ionicons/dist/scss/ionicons.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body,p,h1,h2,h3,a,li{
+    font-family: "San Francisco";
+    font-size: 14px;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+ul {
+  padding-top: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button{
+  outline: none;
+}
+
+.form-group {
+  margin: 10px 0;
+  span {
+     font-size: 0.9em;
+     color: orange;
+  }
+}
+
+.row-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.main-container {
+  display: flex;
+  height: calc(100% - 60px);
+  width: 100%;
+}
+
+.height-container {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ height: 100%;
+}
+
+.sub-container {
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin: 10px 0;
+}
+
+.quarter-container, .half-container {
+  height: 100%;
+}
+
+.quarter-container{
+  width: 25%;
+}
+
+.half-container{
+  width: 50%;
+  border-left: 1px solid #F2F2F2;
+  border-right: 1px solid #F2F2F2;
+}
+
+.header-container {
+  height: 70px;
+  border-bottom: 1px solid #F2F2F2;
+  padding-left: 17px;
+
+}

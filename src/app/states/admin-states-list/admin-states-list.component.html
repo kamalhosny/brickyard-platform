@@ -1,0 +1,27 @@
+<div class="states">
+	<ul class="states__list">
+		<li class= "states__list__item"
+				*ngFor="let state of states"
+				(click)="stateSelected(state)">
+			<p class="states__list__item__name">{{state.name}}</p>
+			<i class="icon ion-md-trash states__list__item__delete"
+				 (click)="deleteState($event, state.id)"
+				 >
+ 		  </i>
+		</li>
+		<li class= "states__list__item"
+				(click)="toggleStateCreation($event, true)">
+			<p class="states__list__item__name new" *ngIf="!creationFormOpened">
+				 Add new State <i class="icon ion-md-add-circle-outline"></i>
+			</p>
+			<div class="state-form" *ngIf="creationFormOpened">
+				<input class="state-name" type="text" [(ngModel)]="newStateName" (keyup.enter)="addState()">
+				<i class="icon ion-md-close-circle-outline"
+					 (click)="toggleStateCreation($event, false)"
+					 >
+	 		  </i>
+			</div>
+		</li>
+
+	</ul>
+</div>

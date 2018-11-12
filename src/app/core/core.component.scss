@@ -1,0 +1,16 @@
+app {
+  &-header {
+    height: 70px;
+    display: flex;
+    background: #000;
+  }
+  &-navbar {
+    background: #ea5f16;
+    width: 5%;
+
+  }
+}
+
+.main-component {
+  width: 100%;
+}

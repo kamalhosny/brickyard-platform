@@ -1,0 +1,12 @@
+<ul class="tabs">
+	<li class="tabs__item"
+		(click)="tabClicked('vehicles')"
+		[class.selected]="selectedTab == 'vehicles'">
+		<i class="icon ion-ios-car tabs__icon"></i>
+	</li>
+	<li class="tabs__item"
+		(click)="tabClicked('states')"
+		[class.selected]="selectedTab == 'states'">
+		<i class="icon ion-ios-apps tabs__icon"></i>
+	</li>
+</ul>

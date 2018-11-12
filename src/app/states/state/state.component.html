@@ -1,0 +1,15 @@
+<div class="wrapper">
+	<form *ngIf="state.id" class="wrapper__form">
+		<label for="state-name" class="wrapper__form__label">State Name</label>
+		<input type="text" name="state-name" id="state-name" [(ngModel)]="state.name" class="wrapper__form__input">
+
+		<label for="state-order" class="wrapper__form__label">State Order</label>
+		<input type="number" name="state-order" id="state-order" [(ngModel)]="state.order" class="wrapper__form__input">
+
+		<button type="Submit" (click)="updateState()" class="wrapper__form__button">Submit</button>
+	</form>
+
+	<div class="empty-state" *ngIf="!state.id">
+		<p> select a state to edit</p>
+	</div>
+</div>

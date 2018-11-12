@@ -1,0 +1,15 @@
+<div class="states">
+	<i class="icon ion-md-arrow-round-back states__icon"
+	   (click)="updateCurrentState(-1)"></i>
+	<div class="states__list">
+		<ul>
+			<li *ngFor="let state of states"
+				class="states__list__item"
+				[class.selected]="state.id === currentState?.id">
+				<p class="states__list__item__title">{{state.name}}</p>
+			</li>
+		</ul>
+	</div>
+	<i class="icon ion-md-arrow-round-forward states__icon"
+	   (click)="updateCurrentState(1)"></i>
+</div>

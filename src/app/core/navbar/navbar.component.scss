@@ -1,0 +1,27 @@
+.tabs{
+	&__item {
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		cursor: pointer;
+		&:hover {
+			background: #e2814e;
+			transition: 0.2s ease-in-out;
+		}
+		&.selected{
+			background: #000;
+			border-top: 1px solid #ea5f16;
+			i {
+				color: #ea5f16;
+			}
+		}
+		&:last-child {
+			border-bottom: 1px solid #000;
+		}
+	}
+
+	&__icon{
+		margin: 10px;
+		font-size: 30px;
+	}
+}

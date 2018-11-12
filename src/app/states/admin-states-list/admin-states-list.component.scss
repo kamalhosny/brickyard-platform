@@ -1,0 +1,56 @@
+.states {
+	border-right: 2px solid #000;
+	height: 100%;
+	&__list{
+		&__item{
+			height: 60px;
+			border-bottom: 1px solid #bbb;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			&__name{
+				line-height: 60px;
+				margin: 0;
+				text-align: center;
+				font-size: 20px;
+				flex: 1;
+				&.new{
+					color: #ea5f16;
+				}
+			}
+
+			&__delete{
+				margin-right: 10px;
+				font-size: 20px;
+				line-height: 60px;
+				color: #aaa;
+				&:hover{
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+.state-form{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+	input{
+		height: 40px;
+		width: 90%;
+		border-radius: 10px;
+		border: 1px solid #ea5e12;
+		outline: none;
+		padding: 0 10px;
+	}
+	i{
+		font-size: 20px;
+	    line-height: 60px;
+	    width: 10%;
+	    text-align: center;
+	    cursor: pointer;
+	}
+}

@@ -1,0 +1,8 @@
+<div class="wrapper">
+	<app-vehicles-list class="quarter-container"
+					   [vehicles]="vehicles"
+					   (vehicleSelected)="vehicleSelected($event)"></app-vehicles-list>
+	<div class="wrapper__vehicle">
+		<router-outlet></router-outlet>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+.wrapper{
+	border-right: 3px solid #ea5f16;
+	border-left: 1px solid #000;
+	height: 100%;
+}
+.list {
+	// width: 20%;
+	height: 100%;
+	&__title{
+		padding-left: 10px;
+		line-height: 70px;
+		background-color: #ea5f16;
+		color: #fff;
+		font-size: 20px;
+		text-align: center;
+		margin-bottom: 0;
+		border-bottom: 2px solid #000;
+	}
+}

@@ -1,0 +1,13 @@
+<div class="wrapper">
+	<ul class="list">
+		<p class="list__title"> Vehicles List </p>
+		<li class="list__item" *ngFor="let vehicle of vehicles | async">
+		<!-- <li class="list__item" *ngFor="let vehicle of vehicles"> -->
+ 			<app-vehicle-details
+			[vehicle]="vehicle"
+			[selectedVehicleId]="selectedVehicle?.id"
+			(vehicleSelected)="vehicleClicked($event)">
+			</app-vehicle-details>
+		</li>
+	</ul>
+</div>

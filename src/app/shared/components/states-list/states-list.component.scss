@@ -1,0 +1,56 @@
+.states {
+	display: flex;
+	font-size: 50px;
+	text-align: center;
+	line-height: 100px;
+	vertical-align: middle;
+	&__icon {
+		width: 5%;
+		cursor: pointer;
+	    padding-top: 10px;
+		&:hover{
+			color: #ea5e12;
+		}
+	}
+	&__list{
+		width: 90%;
+		ul{
+			min-width: 100%;
+			overflow-x: auto;
+			white-space: nowrap;
+			&::-webkit-scrollbar {
+			    height: 3px;
+			}
+
+			&::-webkit-scrollbar-track {
+			    background: #f1f1f1;
+			}
+
+			&::-webkit-scrollbar-thumb {
+			    background: green;
+			}
+
+			&::-webkit-scrollbar-thumb:hover {
+			    background: #555;
+			}
+		}
+		&__item{
+			min-width: 20%;
+			max-width: 20%;
+			margin: 0 10px;
+			display: inline-block;
+			margin-bottom: 10px;
+			border: 1px solid #ea5e12;
+			border-radius: 15px;
+			&__title {
+				font-size: 30px;
+				margin: 0;
+			}
+			&.selected{
+				color: #fff;
+				background: #000;
+				border: 1px solid #000;
+			}
+		}
+	}
+}
